@@ -70,9 +70,9 @@ Deberás imprimir un único entero, la maxima cantidad de tiendas que puedes vis
 - **Subtarea 1** (15 puntos)
   - Todos los $a_i$ son iguales
 - **Subtarea 2** (20 puntos)
-  - $1 \leq N \leq 1000$
-  - $0 \leq T \leq 1000$
+  - $1 \leq N \leq 2000$
+  - $0 \leq T \leq 2000$
 - **Subtarea 3** (25 puntos)
-  - $1 \leq N \leq 1000$
+  - $1 \leq N \leq 2000$
 - **Subtarea 4** (40 puntos)
   - Sin consideraciones adicionales.

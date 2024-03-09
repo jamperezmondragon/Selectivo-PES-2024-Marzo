@@ -44,7 +44,7 @@ vector<int> in_ten_values(int N, int L, int R){
 }
 
 int main(){
-    ///*
+    /*
     ofstream input;
 
     for(int subtask = 2; subtask <= 3; subtask++){
@@ -64,7 +64,7 @@ int main(){
             t_limitL = 0;
             t_limitR = 2000;
             num_of_cases = 10;
-            start_point = 4;
+            start_point = 18;
         }
         else if(subtask == 3){
             n_limitL = 1;
@@ -72,7 +72,7 @@ int main(){
             t_limitL = 0;
             t_limitR = 1e9;
             num_of_cases = 10;
-            start_point = 3;
+            start_point = 9;
         }
         vector<int> N = random_values(num_of_cases, n_limitL, n_limitR);
         if(num_of_cases >= 1){
@@ -142,12 +142,12 @@ int main(){
             input.close();
         }
     }
-    //*/
+    */
 
-    /*
+    ///*
     ofstream testplan;
     testplan.open("testplan");
-    int number_of_cases[5] = {0, 11, 13, 12, 18};
+    int number_of_cases[5] = {0, 11, 27, 18, 55};
     for(int subtask = 1; subtask <= 4; subtask++){
         for(int case_number = 1; case_number<=number_of_cases[subtask]; case_number++){
             string casename = "sub" + to_string(subtask) + "." + to_string(case_number);
@@ -155,6 +155,6 @@ int main(){
         }
     }
     testplan.close();
-    */
+    //*/
     return 0;
 }

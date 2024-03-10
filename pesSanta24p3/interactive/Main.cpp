@@ -3,7 +3,7 @@
 using namespace std;
 
 const int Max_n = 250;
-const int Max_queries = 30;
+const int Max_queries = 60;
 
 int Values[Max_n], Diff[Max_n * Max_n];
 int NumberOfValues, QueryCounter = 0; 
@@ -27,9 +27,9 @@ void diferencias(int SubsetSize, int Subset[]) {
     recibeRespuesta((SubsetSize * (SubsetSize - 1))/2, Diff);
 }
 
-int valor(int _) {
+int valor(int Index) {
     QueryCounter++;
-    if (_ < 0 || NumberOfValues <= _) {
+    if (Index < 0 || NumberOfValues <= Index) {
         cerr << "El indice utilizado es invalido." << endl;
         cout << "0\n";
         exit(0);
@@ -39,11 +39,11 @@ int valor(int _) {
         cout << "0\n";
         exit(0);
     }
-    return Values[_];
+    return Values[Index];
 }
 
-void respuesta(int _, int AnwserArray[]) {
-    if (_ != NumberOfValues) {
+void respuesta(int AnwserSize, int AnwserArray[]) {
+    if (AnwserSize != NumberOfValues) {
         cerr << "El tamaño del arreglo es distinto a N." << endl;
         cout << "0\n";
         exit(0);
@@ -55,7 +55,12 @@ void respuesta(int _, int AnwserArray[]) {
             exit(0);
         }
     }
-    cout << "1\n";
+    if(QueryCounter <= 30){
+        cout << "1\n";
+    }
+    else{
+        cout<< 1.0 - ((double)(QueryCounter - 30) / (double)(60 - 30))<< '\n';
+    }
     exit(0);
 }
 

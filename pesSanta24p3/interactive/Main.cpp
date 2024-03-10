@@ -1,75 +1,70 @@
 #include <bits/stdc++.h>
+#include "game.h"
 using namespace std;
 
-int V[1024];
-int N, query_cnt = 0, max_queries;
-mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+const int Max_n = 250;
+const int Max_queries = 30;
 
+int Values[Max_n], Diff[Max_n * Max_n];
+int NumberOfValues, QueryCounter = 0; 
 
+mt19937 randomSeed(chrono::steady_clock::now().time_since_epoch().count());
 
-vector<int> diferencias(int _, int S[]) {
-  query_cnt++;
- if (query_cnt > max_queries) {
-    cerr << "Has llamado la función similitud " << query_cnt
-         << " veces, más de las que tenías permitido." << endl;
-    cout << "0\n";
-    exit(0);
-  }
- vector<int> D;
-  for (int i = 0; i < _; i++) {
-    for (int j = i; j < _; j++) {
-      D.push_back(abs(V[S[i]] - V[S[j]]));
+void diferencias(int SubsetSize, int Subset[]) {
+    QueryCounter++;
+    if (QueryCounter > Max_queries) {
+        cerr << "Has hecho mas preguntas de las que tenías permitido." << endl;
+        cout << "0\n";
+        exit(0);
     }
-  }
-
-  //randomize answer
-  for (int k = 0; k < 10; k++) {
-    for (int i = 0; i < (int)D.size() - 1; i++) {
-      int j = (rng() % ((int)D.size() - i)) + i;
-      swap(D[i], D[j]);
+    int currentIndex = 0;
+    for (int i = 0; i < SubsetSize; i++) {
+        for (int j = i + 1; j < SubsetSize; j++) {
+            Diff[currentIndex++] = abs(Values[Subset[i]] - Values[Subset[j]]);
+        }
     }
-  }
-  return D;
+    shuffle(Diff, Diff + currentIndex, randomSeed);
+    recibeRespuesta((SubsetSize * (SubsetSize - 1))/2, Diff);
 }
 
 int valor(int _) {
-  query_cnt++;
-  if (_ < N) {
-    cerr << "El valor utilizado es inválido." << endl;
-    cout << "0\n";
-    exit(0);
-  }
- if (query_cnt > max_queries) {
-    cerr << "Has llamado la función similitud " << query_cnt
-         << " veces, más de las que tenías permitido." << endl;
-    cout << "0\n";
-    exit(0);
-  }
-
-  return V[_];
-}
-
-void respuesta(int _, int S[]) {
-  if (_ != N) {
-    cerr << "El tamaño del arreglo es distinto a N." << endl;
-    cout << "0\n";
-    exit(0);
-  }
-  for (int i = 0; i < N; i++) {
-    if (S[i] != V[i]) {
-      cerr << "El arreglo en la respuesta es incorrecto." << endl;
-      cout << "0\n";
-      exit(0);
+    QueryCounter++;
+    if (_ < 0 || NumberOfValues <= _) {
+        cerr << "El indice utilizado es invalido." << endl;
+        cout << "0\n";
+        exit(0);
     }
-  }
-  cout << "1\n";
-  exit(0);
+    if (QueryCounter > Max_queries) {
+        cerr << "Has hecho mas preguntas de las que tenías permitido." << endl;
+        cout << "0\n";
+        exit(0);
+    }
+    return Values[_];
 }
 
-int main() {
-  int N; cin >> N >> max_queries;
-  for (int i = 0; i < N; i++) {
-    cin >> V[i];
-  }
-  EncontrarArreglo(N);
+void respuesta(int _, int AnwserArray[]) {
+    if (_ != NumberOfValues) {
+        cerr << "El tamaño del arreglo es distinto a N." << endl;
+        cout << "0\n";
+        exit(0);
+    }
+    for (int i = 0; i < NumberOfValues; i++) {
+        if (AnwserArray[i] != Values[i]) {
+            cerr << "El arreglo en la respuesta es incorrecto." << endl;
+            cout << "0\n";
+            exit(0);
+        }
+    }
+    cout << "1\n";
+    exit(0);
+}
+
+int main(){
+    cin >> NumberOfValues;
+    for (int i = 0; i < NumberOfValues; i++) {
+        cin >> Values[i];
+    }
+    EncontrarArreglo(NumberOfValues);
+    cerr<< "No llamaste a la funcion respuesta"<< endl;
+    cout<< "0\n";
 }

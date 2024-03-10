@@ -1,9 +1,0 @@
-interface Main {
-	int[] diferencias([Range(0, 1024)] int N, int[N] S);
-  int valor(int N);
-	void respuesta([Range(0,  1024)] int N, int[N] S);
-};
-
-interface EncontrarArreglo {
-	void EncontrarArreglo (int N);
-};

@@ -2,52 +2,51 @@
 #include "game.h"
 using namespace std;
 
-const int MAXN = 250;
+const int Max_n = 250;
+const int Max_queries = 30;
 
-int V[MAXN];
-int N, query_cnt = 0, max_queries = 30;
+int Values[Max_n], Diff[Max_n * Max_n];
+int NumberOfValues, QueryCounter = 0; 
 
-void diferencias(int _, int S[], int D[]) {
-    query_cnt++;
-    if (query_cnt > max_queries) {
-        cerr << "Has hecho " << query_cnt
-            << " preguntas, más de las que tenías permitido." << endl;
+void diferencias(int SubsetSize, int Subset[]) {
+    QueryCounter++;
+    if (QueryCounter > Max_queries) {
+        cerr << "Has hecho mas preguntas de las que tenías permitido." << endl;
         cout << "0\n";
         exit(0);
     }
-    int idx = 0;
-    for (int i = 0; i < _; i++) {
-        for (int j = i + 1; j < _; j++) {
-            D[idx++] = abs(V[S[i]] - V[S[j]]);
+    int currentIndex = 0;
+    for (int i = 0; i < SubsetSize; i++) {
+        for (int j = i + 1; j < SubsetSize; j++) {
+            Diff[currentIndex++] = abs(Values[Subset[i]] - Values[Subset[j]]);
         }
     }
+    recibeRespuesta((SubsetSize * (SubsetSize - 1))/2, Diff);
 }
 
 int valor(int _) {
-    query_cnt++;
-    if (_ < 0 || N <= _) {
+    QueryCounter++;
+    if (_ < 0 || NumberOfValues <= _) {
         cerr << "El indice utilizado es invalido." << endl;
         cout << "0\n";
         exit(0);
     }
-    if (query_cnt > max_queries) {
-        cerr << "Has hecho " << query_cnt
-            << " preguntas, mas de las que tenías permitido." << endl;
+    if (QueryCounter > Max_queries) {
+        cerr << "Has hecho mas preguntas de las que tenías permitido." << endl;
         cout << "0\n";
         exit(0);
     }
-
-    return V[_];
+    return Values[_];
 }
 
-void respuesta(int _, int S[]) {
-    if (_ != N) {
+void respuesta(int _, int AnwserArray[]) {
+    if (_ != NumberOfValues) {
         cerr << "El tamaño del arreglo es distinto a N." << endl;
         cout << "0\n";
         exit(0);
     }
-    for (int i = 0; i < N; i++) {
-        if (S[i] != V[i]) {
+    for (int i = 0; i < NumberOfValues; i++) {
+        if (AnwserArray[i] != Values[i]) {
             cerr << "El arreglo en la respuesta es incorrecto." << endl;
             cout << "0\n";
             exit(0);
@@ -58,9 +57,11 @@ void respuesta(int _, int S[]) {
 }
 
 int main(){
-    cin >> N;
-    for (int i = 0; i < N; i++) {
-        cin >> V[i];
+    cin >> NumberOfValues;
+    for (int i = 0; i < NumberOfValues; i++) {
+        cin >> Values[i];
     }
-    EncontrarArreglo(N);
+    EncontrarArreglo(NumberOfValues);
+    cerr<< "No llamaste a la funcion respuesta"<< endl;
+    cout<< "0\n";
 }

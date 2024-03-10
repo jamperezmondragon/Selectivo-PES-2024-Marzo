@@ -1,9 +1,10 @@
 interface Main {
-	[NoReturn] void diferencias([Range(1, 62500)] int N, int[N] S, int[N] D);
+	[NoReturn] void diferencias([Range(1, 250)] int N, int[N] S);
   	[NoReturn] int valor(int N);
 	[NoReturn] void respuesta([Range(1,  250)] int N, int[N] S);
 };
 
 interface game {
+	void recibeRespuesta([Range(1, 62500)] int N, int[N] A);
 	void EncontrarArreglo (int N);
 };

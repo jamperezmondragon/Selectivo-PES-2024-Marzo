@@ -49,19 +49,21 @@ Deberás imprimir $Q$ enteros separados por un salto de linea, la suma minima de
 
 # Límites
 
-- $1 \leq N \leq 10^5$
-- $1 \leq M \leq 4 \times 10^5$
+- $2 \leq N \leq 10^5$
+- $1 \leq M \leq 2 \times 10^5$
 - $1 \leq a_i, b_i, S_i, T_i\leq N$
 - $1 \leq c_i \leq 10^9$
 - $1 \leq Q \leq 10^5$
 - $a_i \neq b_i$
 - $S_i \neq T_i$
+- Por cada pareja de vértices, existe a lo más una arista.
 
 # Subtareas
 
-- **Subtarea 1** (x puntos)
-  - $1 \leq N, Q \leq 4 \times 10^3$
-- **Subtarea 2** (x puntos)
+- **Subtarea 1** (20 puntos)
   - $Q = 1$
-- **Subtarea 3** (x puntos)
+- **Subtarea 2** (30 puntos)
+  - $2 \leq N \leq 4 \times 10^3$
+  - $1 \leq Q \leq 4 \times 10^3$
+- **Subtarea 3** (50 puntos)
   - Sin consideraciones adicionales.

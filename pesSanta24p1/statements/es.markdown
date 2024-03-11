@@ -33,12 +33,6 @@ Deberás imprimir $Q$ enteros separados por un salto de linea, la suma minima de
 7
 
 ||input
-1 3
-0 3
-||output
-0
-
-||input
 4 6
 1 3 5
 4 1 10

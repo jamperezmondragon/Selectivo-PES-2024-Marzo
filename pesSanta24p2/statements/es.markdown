@@ -1,14 +1,20 @@
-There are $N$ stores called Store $1$, Store $2$, ..., Store $N$. Takahashi, who is at his house at time $0$, is planning to visit some of these stores.
+El problema que le puso MacDonalds a JP estaba muy difícil, y nadie pudo ayudarlo a resolverlo... :(. Sin embargo, probó su suerte en Subway, y quedaron encantados con sus habilidades. Hoy es su primer día, y le encargaron que hiciera el mandado. Hay $N$ tiendas, y dependiendo del momento del día en que las visite, tendrá que esperar más o menos tiempo haciendo fila para recibir su pedido.
 
-It takes Takahashi one unit of time to travel from his house to one of the stores, or between any two stores.
+#Problema
 
-If Takahashi reaches Store $i$ at time $t$, he can do shopping there after standing in a queue for $a_i \times t + b_i$ units of time. (We assume that it takes no time other than waiting.)
+Hay $N$ tiendas numeradas $1$, $2$, ..., $N$. JP, que está en Subway en el tiempo $0$, tiene que visitar algunas de las tiendas.
 
-All the stores close at time $T+0.5$. If Takahashi is standing in a queue for some store then, he cannot do shopping there.
+Le toma a JP una unidad de tiempo moverse de Subway a cualquier tienda, o entre cualesquiera dos tiendas.
 
-Takahashi does not do shopping more than once in the same store.
+Si JP llega a la tienda $i$ en el tiempo $t$, tendrá que esperar $a_i \times t + b_i$ unidades de tiempo haciendo fila (asumimos que no le toma tiempo completar la compra además de la espera).
 
-Find the maximum number of times he can do shopping before time $T+0.5$.
+Todas las tiendas cierran en el tiempo $T + 0.5$. Si JP estaba en la fila de alguna tienda en ese momento, no podrá concluir su compra.
+
+Además, JP no puede ir a una tienda más de una vez.
+
+Como a JP no le gusta hacer fila, quiere hacer el mandado en la mayor cantidad de tiendas posibles.
+
+Determina la mayor cantidad de tiendas en las que JP puede completar la compra, antes del tiempo $T + 0.5$.
 
 # Entrada
 

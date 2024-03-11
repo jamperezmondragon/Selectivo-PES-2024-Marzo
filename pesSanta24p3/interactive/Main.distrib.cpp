@@ -11,9 +11,15 @@ int NumberOfValues, QueryCounter = 0;
 void diferencias(int SubsetSize, int Subset[]) {
     QueryCounter++;
     if (QueryCounter > Max_queries) {
-        cerr << "Has hecho mas preguntas de las que tenías permitido." << endl;
+        cerr << "Has hecho más preguntas de las que tenías permitido." << endl;
         cout << "0\n";
         exit(0);
+    }
+    for(int i = 0; i < SubsetSize; i++){
+        if(S[i] < 0 || N <= S[i]){
+            cerr << "Has utilizado un índice inválido" << endl;
+            cout << "0\n";
+        }
     }
     int currentIndex = 0;
     for (int i = 0; i < SubsetSize; i++) {
@@ -27,12 +33,12 @@ void diferencias(int SubsetSize, int Subset[]) {
 int valor(int Index) {
     QueryCounter++;
     if (Index < 0 || NumberOfValues <= Index) {
-        cerr << "El indice utilizado es invalido." << endl;
+        cerr << "El índice utilizado es inválido." << endl;
         cout << "0\n";
         exit(0);
     }
     if (QueryCounter > Max_queries) {
-        cerr << "Has hecho mas preguntas de las que tenías permitido." << endl;
+        cerr << "Has hecho más preguntas de las que tenías permitido." << endl;
         cout << "0\n";
         exit(0);
     }
@@ -67,6 +73,6 @@ int main(){
         cin >> Values[i];
     }
     EncontrarArreglo(NumberOfValues);
-    cerr<< "No llamaste a la funcion respuesta"<< endl;
+    cerr<< "No llamaste a la función respuesta"<< endl;
     cout<< "0\n";
 }

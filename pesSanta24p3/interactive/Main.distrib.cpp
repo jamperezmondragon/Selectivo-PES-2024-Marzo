@@ -16,7 +16,7 @@ void diferencias(int SubsetSize, int Subset[]) {
         exit(0);
     }
     for(int i = 0; i < SubsetSize; i++){
-        if(S[i] < 0 || N <= Subset[i]){
+        if(Subset[i] < 0 || N <= Subset[i]){
             cerr << "Has utilizado un índice inválido" << endl;
             cout << "0\n";
         }

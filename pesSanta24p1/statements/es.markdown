@@ -6,17 +6,17 @@ For each round, find the minimum possible total weight of the edges chosen by Ta
 
 # Entrada
 
-En la primera línea dos enteros $N$ y $M$, la cantidad de vertices y la cantidad de aristas respectivamente.
+En la primera línea dos enteros $N$ y $M$, la cantidad de vértices y la cantidad de aristas respectivamente.
 
-En las siguientes $M$ lineas, tres enteros $a_i$, $b_i$ y $c_i$, la pareja de vertices y el peso de la arista que los conecta.
+En las siguientes $M$ líneas, tres enteros $a_i$, $b_i$ y $c_i$, la pareja de vértices y el peso de la arista que los conecta.
 
-En la siguiente linea, un entero $Q$, la cantidad de preguntas.
+En la siguiente línea, un entero $Q$, la cantidad de preguntas.
 
-En las siguientes $Q$ lineas, dos enteros $S_i$ y $T_i$.
+En las siguientes $Q$ líneas, dos enteros $S_i$ y $T_i$.
 
 # Salida
 
-Deberás imprimir $Q$ enteros separados por un salto de linea, la suma minima de las aristas para cada pregunta.
+Deberás imprimir $Q$ enteros separados por un salto de línea, la suma mínima de las aristas para cada pregunta.
 
 # Ejemplo
 

@@ -23,10 +23,36 @@ El jurado tiene un arreglo escondido, de enteros positivos distintos. Tu quieres
 
  - Cuando tengas lista tu respuesta, debes llamar la función `respuesta(int K, int R[])`, donde $R$ es el arreglo que afirmas que es la respuesta, y $K$ es su tamaño ($K$ debe ser $N$).
 
+#Ejemplo
 
+||input
+EncuentraArreglo(3)
+||output
+-
+||description
+En este caso el arreglo escondido es $A = [1, 2, 5]$
 
+||input
+valor(0)
+||output
+1
 
-{{libinteractive:download}}
+||input
+valor(1)
+||output
+2
+
+||input
+diferencias(3, {1, 2, 3})
+||output
+recibeRespuesta (3, {4, 3, 1})
+
+||input
+respuesta(3, {1, 2, 5})
+||output
+-
+
+||end
 
 #Evaluación
 
@@ -37,6 +63,8 @@ Tu puntaje dependerá de la cantidad de veces que llames a la función `diferenc
 - Si $60 \leq Q$ no obtendrás ningún punto.
 
 También obtendrás $0$ puntos si al mandar llamar la función `diferencias` o `valor`  los argumentos no cumplen con los límites establecidos.
+
+{{libinteractive:download}}
 
 # Límites
 

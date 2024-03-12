@@ -1,6 +1,6 @@
-En épocas recientes, el polo norte se ha visto afectado por el efecto invernadero y las insoportables temperaturas, producto de ello, el hielo que fungía como carreteras entre las fábricas de Santa Claus se ha debilitado, debido a ello, Santa y Rodolfo se han puesto manos a la obra para mantener a flote su gran empresa mundial.
+En épocas recientes, el polo norte se ha visto afectado por el efecto invernadero y las insoportables temperaturas, por esto, el hielo que fungía como carreteras entre las fábricas de Santa Claus se ha debilitado. Santa y Rodolfo se han puesto manos a la obra para mantener a flote su gran empresa mundial.
 
-A Santa le interesa conectar las $N$ fábricas y para ello dispone de $M$ carreteras posibles, dichas carreteras pueden ser construidas por un costo $c_i$, por lo que les interesa minimizar el costo total de construcción. Las fábricas están numeradas del $1$ al $N$. La $i$-ésimo carretera conecta las fábricas $a_i$ y $b_i$, y tiene un costo de construcción de $c_i$.
+A Santa le interesa conectar las $N$ fábricas y para ello dispone de $M$ carreteras posibles, dichas carreteras pueden ser construidas por un costo $c_i$, por lo que les interesa minimizar el costo total de construcción. Las fábricas están numeradas del $1$ al $N$. La $i$-ésima carretera conecta las fábricas $a_i$ y $b_i$, y tiene un costo de construcción de $c_i$.
 
 El equipo de Santa quiere probar $Q$ parejas de fábricas posibles, tal que Santa supervisará la fábrica $S_i$ y Rodolfo la fábrica $R_i$, cada otra fábrica debe poder llegar a alguna de estas 2 a través de una serie de carreteras, debido a que nadie del equipo de Santa sabe programar, te han pedido ayuda para determinar el costo mínimo de construir el nuevo sistema de carreteras.
 

@@ -139,7 +139,7 @@ auto GenerateRandomGraph(int N, int M, vector<array<int, 2>> X = {}) -> vector<a
 
 auto GenerateRandomQueries(caso &C) {
   C.Queries.resize(C.Q);
-  for (auto &[a, b] : Q) {
+  for (auto &[a, b] : C.Queries) {
     a = (rng() % C.N) + 1;
     b = (rng() % C.N) + 1;
   }

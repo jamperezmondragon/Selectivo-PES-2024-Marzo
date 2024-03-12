@@ -8,7 +8,7 @@ struct caso {
   void print(string file_name) {
     ofstream file_output;
     file_output.open(file_name);
-    file_output << N << " " << N << '\n';
+    file_output << N << " " << M << '\n';
     for (auto [a, b, c] : Edges) {
       file_output << a << " " << b << " " << c << '\n';
     }
@@ -116,8 +116,11 @@ auto AddRandomNoiseToTree(vector<array<int, 2>> &V, int K) {
   }
 }
 
-auto GenerateRandomGraph(int N, int M) -> vector<array<int, 2>> { // 1-indexed
+auto GenerateRandomGraph(int N, int M, vector<array<int, 2>> X = {}) -> vector<array<int, 2>> { // 1-indexed
   set<array<int, 2>> S;
+  vector<array<int, 2>> V;
+  for (auto e : X) S.insert(e);
+  M -= size(X);
   long long int T = (long long int)(N)*(long long int)(N - 1);
   T /= 2LL;
   int a = 0, b = 0;
@@ -128,26 +131,23 @@ auto GenerateRandomGraph(int N, int M) -> vector<array<int, 2>> { // 1-indexed
       if (a < b) swap(a, b);
     }
     S.insert({a, b});
-  }
-  vector<array<int, 2>> V;
-  for (auto [x, y] : S) {
-    if (rng()&1) swap(x, y);
-    V.push_back({x + 1, y + 1});
+    if (rng()&1) V.push_back({a + 1, b + 1});
+    else V.push_back({b + 1, a + 1});
   }
   return V;
 }
 
-auto GraphUnion(vector<array<int, 2>> V1, vector<array<int, 2>> V2) -> vector<array<int, 2>> {
-  set<int> S;
-  for (auto e : V1) S.insert(e);
-  for (auto e : V2)  if (!S.count(e)) V1.push_back(e);
-  //sort(V1.begin(), V1.end());
-  //unique(V1.begin(), V1.end());
-  //RngShuffle(V1);
-  return V1;
+auto GenerateRandomQueries(caso &C) {
+  C.Queries.resize(C.Q);
+  for (auto &[a, b] : Q) {
+    a = (rng() % C.N) + 1;
+    b = (rng() % C.N) + 1;
+  }
 }
 
+
 int main() {
+  return 0;
   for (int i = 0; i < 3; i++) {
     for (int j = 0; j < 5; j++) {
       string file_name = "sub";

@@ -59,10 +59,12 @@ void respuesta(int AnwserSize, int AnwserArray[]) {
         }
     }
     if(QueryCounter <= 30){
-        cout << "1\n";
+        cerr << "Respuesta correcta!" << endl;
+        cout << 1.0<< '\n';
     }
     else{
-        cout<< 1.0 - ((double)(QueryCounter - 30) / (double)(60 - 30))<< '\n';
+        cerr << "Tu respuesta es correcta pero usaste más de 30 preguntas." << endl;
+        cout<< 1.0<< '\n';
     }
     exit(0);
 }

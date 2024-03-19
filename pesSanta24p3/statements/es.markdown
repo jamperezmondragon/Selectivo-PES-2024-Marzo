@@ -75,9 +75,9 @@ También obtendrás $0$ puntos si al mandar llamar la función `diferencias` o `
 
 - **Subtarea 1** (5 puntos)
   - $1 \leq N \leq 30$
-- **Subtarea 2** (28 puntos)
+- **Subtarea 2** (29 puntos)
   - Los valores del arreglo están ordenados de manera creciente o de manera decreciente
-- **Subtarea 3** (45 puntos)
+- **Subtarea 3** (44 puntos)
   - $A[0] = 1$
 - **Subtarea 4** (22 puntos)
   - Sin consideraciones adicionales.

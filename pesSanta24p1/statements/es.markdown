@@ -1,10 +1,13 @@
-Moriarty a puesto en marcha otro de sus sofisticados planes, monopolizando las carreteras de la ciudad para controlarlo todo, así que Sherlock y Watson deben idear un plan para detenerlo.
+Moriarty ha puesto en marcha otro de sus sofisticados planes, esta vez monopolizando las carreteras de la ciudad para controlarlo todo, así que Sherlock y Watson deben idear un plan para detenerlo.
 
-La ciudad de Londres está dividida en $N$ zonas que están conectadas a través de $M$ carreteras. Moriarty a puesto una tarifa a cada una de estas carreteras que hay que pagar para poder moverse libremente por ellas. Las zonas están numeradas del $1$ al $N$. La $i$-ésima carretera conecta las zonas $a_i$ y $b_i$, y tiene un costo de $c_i$.
+
+La ciudad de Londres está dividida en $N$ zonas que están conectadas a través de $M$ carreteras. Moriarty ha puesto una tarifa a cada una de estas carreteras que hay que pagar para poder moverse libremente por ellas. Las zonas están numeradas del $1$ al $N$. La $i$-ésima carretera conecta las zonas $a_i$ y $b_i$, y tiene un costo de $c_i$.
+
 
 El duo quiere establecer dos bases de vigilancia en algún par de zonas, y quieren poder llegar a todas las zonas de la ciudad desde al menos alguna de ellas, obviamente gastando la mínima cantidad de dinero posible.
 
-No todas las zonas son igual de idoneas para establecer una base, así que quieren probar $Q$ posibles parejas de bases posibles, tal que Sherlock vigile la base $S_i$ y Watson la base $W_i$. Como Sherlock dice que este problema es trivial, Watson te a pedido ayuda para disimular. Ayúdalo a calcular el mínimo costo para cada par de zonas.
+
+No todas las zonas son igual de idóneas para establecer una base, así que quieren probar $Q$ posibles parejas de bases posibles, tal que Sherlock vigile la base $S_i$ y Watson la base $W_i$. Como Sherlock dice que este problema es trivial, Watson te ha pedido ayuda para disimular. Ayúdalo a calcular el mínimo costo para cada par de zonas.
 
 # Entrada
 
@@ -57,7 +60,7 @@ Deberás imprimir $Q$ enteros separados por un salto de línea, la suma mínima 
 - $1 \leq c_i \leq 10^9$
 - $1 \leq Q \leq 10^5$
 - $a_i \neq b_i$
-- $S_i \neq R_i$
+- $S_i \neq W_i$
 - Por cada pareja de vértices, existe a lo más una arista.
 
 # Subtareas

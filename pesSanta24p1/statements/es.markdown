@@ -65,10 +65,10 @@ Deberás imprimir $Q$ enteros separados por un salto de línea, la suma mínima 
 
 # Subtareas
 
-- **Subtarea 1** (20 puntos)
+- **Subtarea 1** (17 puntos)
   - $Q = 1$
-- **Subtarea 2** (30 puntos)
+- **Subtarea 2** (60 puntos)
   - $2 \leq N \leq 4 \times 10^3$
   - $1 \leq Q \leq 4 \times 10^3$
-- **Subtarea 3** (50 puntos)
+- **Subtarea 3** (23 puntos)
   - Sin consideraciones adicionales.
